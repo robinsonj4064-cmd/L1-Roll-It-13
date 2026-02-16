@@ -22,6 +22,27 @@ def instructions():
     print("Roll the dice to gamble ur life away")
 
 
+
+
+
+
+def int_check():
+    """Checks users enetr on integer more than / equal to 13"""
+
+    error = "Please enter an integer more than / equal to 13."
+
+    while True:
+        try:
+            response = int(input("What is the game goal? "))
+
+            if response < 13:
+                print(error)
+            else:
+                return response
+
+        except ValueError:
+            print(error)
+
 #Main routine
 
 # ask the user if they want instructions (check they said yes / no)
@@ -32,4 +53,5 @@ if want_instructions == "yes":
     instructions()
 
 print()
-print("Program continues")
+game_goal = int_check()
+print(game_goal)

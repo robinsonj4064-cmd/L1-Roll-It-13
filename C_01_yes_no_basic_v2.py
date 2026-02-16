@@ -21,7 +21,9 @@ def yes_no(question):
 
 #Main routine
 
-want_instructions = yes_no("Do you want to see the instructions").lower()
-want_instructions = yes_no("want to gamble your soul away")
+#testing loop...
+while True:
+    want_instructions = yes_no("Do you want to see the instructions").lower()
+    print(f"you chose {want_instructions}")
 
 print("we done")
