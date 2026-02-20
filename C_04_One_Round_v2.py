@@ -18,6 +18,12 @@ def initial_points(which_player):
 
     return total, double
 
+
+def make_statement(statement, decoration):
+    """Adds emojis / additional characters to the start and end of headings"""
+    ends = decoration * 3
+    print(f"\n{ends} {statement} {ends}")
+
 # Main starts here...
 
 
@@ -83,3 +89,26 @@ while player_1_points < 13 and player_2_points < 13:
 # associate player points with either the user or the computer
 user_points = player_1_points
 comp_points = player_2_points
+
+# switch the user and computer points if the computer went first
+if first == "Computer":
+    user_points, comp_points = comp_points, user_points
+
+# work out who won...
+if user_points > comp_points:
+    winner = "user"
+else:
+    winner = "computer"
+
+round_feedback = f"The {winner} won."
+
+# double user points if eligible
+if winner == "user" and double_user == "yes":
+    user_points == user_points * 2
+
+    # Output round results
+make_statement("Round Results", "=")
+print(f"User Points: {user_points}   | Computer Points {comp_points}")
+print(round_feedback)
+print()
+
