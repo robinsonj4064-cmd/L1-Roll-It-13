@@ -70,12 +70,16 @@ while player_1_points < 13 and player_2_points < 13:
     if player_1_points >= 13:
         break
 
-        # second person rolls the die (and score is updated)
-        player_2_roll = random.randint(1, 6)
-        player_2_points += player_2_roll
+    # second person rolls the die (and score is updated)
+    player_2_roll = random.randint(1, 6)
+    player_2_points += player_2_roll
 
     print(f"{second}: Rolled a {player_2_roll} - has {player_2_points} points")
 
     print(f"{first}: {player_1_points}  | {second} {player_2_points}")
 
-print("end of round")
+# end of round
+
+# associate player points with either the user or the computer
+user_points = player_1_points
+comp_points = player_2_points
