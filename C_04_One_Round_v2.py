@@ -91,20 +91,20 @@ user_points = player_1_points
 comp_points = player_2_points
 
 # switch the user and computer points if the computer went first
-if first == "Computer":
+if first == "Comp":
     user_points, comp_points = comp_points, user_points
 
 # work out who won...
 if user_points > comp_points:
-    winner = "user"
+    winner = "User"
 else:
-    winner = "computer"
+    winner = "Comp"
 
 round_feedback = f"The {winner} won."
 
 # double user points if eligible
-if winner == "user" and double_user == "yes":
-    user_points == user_points * 2
+if winner == "User" and double_user == "yes":
+    user_points = user_points * 2
 
     # Output round results
 make_statement("Round Results", "=")
